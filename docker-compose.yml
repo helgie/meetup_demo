@@ -1,0 +1,54 @@
+version: '3'
+services:
+  test-node:
+    image: xvfb-ubuntu-new
+    environment:
+      - "TEST:-s --pdb test_demo.py -m demo"
+    volumes:
+      - ./:/tests
+    working_dir: /tests
+version: '3'
+services:
+  test-node-1:
+    image: xvfb-ubuntu-new
+    environment:
+      - "TEST:-s --pdb test_demo.py -m demo"
+    volumes:
+      - ./:/tests
+    working_dir: /tests
+version: '3'
+services:
+  test-node-2:
+    image: xvfb-ubuntu-new
+    environment:
+      - "TEST:-s --pdb test_demo.py -m demo"
+    volumes:
+      - ./:/tests
+    working_dir: /tests
+version: '3'
+services:
+  test-node-3:
+    image: xvfb-ubuntu-new
+    environment:
+      - "TEST:-s --pdb test_demo.py -m demo"
+    volumes:
+      - ./:/tests
+    working_dir: /tests
+version: '3'
+services:
+  test-node-4:
+    image: xvfb-ubuntu-new
+    environment:
+      - "TEST:-s --pdb test_demo.py -m demo"
+    volumes:
+      - ./:/tests
+    working_dir: /tests
+version: '3'
+services:
+  test-node-5:
+    image: xvfb-ubuntu-new
+    environment:
+      - "TEST:-s --pdb test_demo.py -m demo"
+    volumes:
+      - ./:/tests
+    working_dir: /tests
