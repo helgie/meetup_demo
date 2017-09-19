@@ -1,10 +1,6 @@
-pipeline {
-    agent none 
-    stages {
-        stage('stage - 1') {
-            steps {
-                echo 'stage - 1'
-            }
-        }
-    }
+node {
+  stage('prepare') {
+    deleteDir()
+    git 'https://github.com/helgie/meetup_demo.git'
+  }
 }
