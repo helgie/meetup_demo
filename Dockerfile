@@ -64,4 +64,4 @@ CMD \
   export DISPLAY=:$(hostname -i | sed s/.*\0.//) ; \
   ffmpeg -f x11grab -video_size 1280x720 -i 127.0.0.1${DISPLAY} -codec:v \
   libx264 -r 12 /tests/Screenshots/$(hostname)$(date +"%I_%M_%S").mkv > \
-  /dev/null 2>/dev/null & py.test -s $TEST ; sleep 5 
+  /dev/null 2>/dev/null & py.test -s $TEST
