@@ -1,7 +1,5 @@
-import pytest, time
+import pytest
 from helper.webuihelper import WebUITest
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
 
 from selenium.webdriver.common.keys import Keys
 
@@ -16,4 +14,3 @@ class TestDemonstration(WebUITest):
         item = self.driver.find_element_by_xpath('//div[@class="g" and contains(., "qafest.com")]//h3/a')
         item.click()
         assert self.driver.find_elements_by_xpath('//*[contains(., "QA Fest 2017")]')
-
