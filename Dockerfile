@@ -3,9 +3,6 @@ FROM ubuntu:latest
 ENV CHROME="\
   https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb"
 
-ENV CHROMEDRIVER="\
-https://chromedriver.storage.googleapis.com/2.31/chromedriver_linux64.zip"
-
 ENV PACKAGES="\
   curl \
   ffmpeg \
@@ -55,7 +52,8 @@ RUN \
   rm chrome.deb
 
 RUN \
-  curl -s -o chromedriver.zip ${CHROMEDRIVER} ; \
+  curl -s -o chromedriver.zip "https://chromedriver.storage.googleapis.com/$(curl \
+  -s https://chromedriver.storage.googleapis.com/LATEST_RELEASE)/chromedriver_linux64.zip" ; \
   unzip -q chromedriver -d /usr/local/bin && rm chromedriver.zip ;
 
 CMD \
