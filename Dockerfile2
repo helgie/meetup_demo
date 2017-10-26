@@ -1,6 +1,0 @@
-node {
-   stage('Prepare') {
-       git 'https://github.com/helgie/meetup_demo.git'
-       sh 'ls -l'
-   }
-}
